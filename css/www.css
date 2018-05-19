@@ -10,20 +10,15 @@ html{
 }
 html, body {
 	width:100%;
-    height:100%;
     position:relative;
 }
 body{
     font-size:2.5em;
     font-family:'Open Sans', sans-serif;
     color:#444;
-    background:url(../img/background.jpg) no-repeat center fixed;
-    -webkit-background-size: cover; /* pour Chrome et Safari */
-    -moz-background-size: cover; /* pour Firefox */
-    -o-background-size: cover; /* pour Opera */
-    background-size: cover; /* version standardisée */
-
+    background-color:#e3e4e5;
 }
+
 li{
     list-style-type: none;
     display:inline-block;
@@ -32,8 +27,45 @@ a{
     text-decoration: none;
     color:inherit;
 }
+
+header{
+    width:100%;
+    background-image:url("../img/header.jpg");
+    background-attachment: fixed;
+    background-position-y: 770px;
+    color:#ffffff;
+    padding:30px;
+}
+
+
+.logo{
+    width:200px;
+    height:200px;
+    display:block;
+    background-color:#ffffff;
+    margin:0 auto;
+
+}
+
+.slogan{
+    font-size:50px;
+    text-align:center;
+    text-shadow: 1px 1px 9px black;
+    margin-top:40px;
+}
+
+.vert{
+    color:#009246;
+}
+.blanc{
+    color:#F1F2F1;
+}
+.rouge{
+    color:#CE2B37;
+}
+
 #global{
-    width:1050px;
+    width:1300px;
     position: relative;
     text-align: center;
     left:50%;
@@ -53,6 +85,7 @@ h1{
 }
 #conteneurBtnSon{
     width:100%;
+    padding-top:30px;
 }
 #conteneurBtnSon a:link{
     font-size:1em;
@@ -72,6 +105,7 @@ h1{
     vertical-align: middle;
     line-height:250px;
 }
+
 #conteneurBtnSon a:hover{
     color:darkgrey;
 }
@@ -96,7 +130,7 @@ h1{
     transition: all 400ms ease-in-out;
 }
 #conteneurMenu.openMenu{
-    width:50%;
+    width:30%;
     padding:100px 20px 10px 20px;
     box-shadow: 1px 0 5px 0 rgba(0,0,0,0.5);
 }
@@ -126,10 +160,10 @@ h1{
 }
 #conteneurMenu nav a:link,#conteneurMenu nav a:visited,
 #conteneurMenu nav a:link.tout,#conteneurMenu nav a:visited.tout{
-    width:100%s
-    color:#888; 
-    line-height: 30px;
-    font-size:1.0em;
+    width:100%;
+    color: #888; 
+    line-height: 36px;
+    font-size:20px;
     text-align:right;
     padding-right:10px;
     display:block;
