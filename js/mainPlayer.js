@@ -1,12 +1,12 @@
 window.onload = function(){
     // Gestion du player VAR
     //recuperation du conteneur des boutons de lancement du son
-        var conteneurBtn = document.getElementById('conteneurBtnSon');
+    var conteneurBtn = document.getElementById('conteneurBtnSon');
     // tableau de stockage des boutons crées dans le conteneurBtn
-        var btnSon = [];
+    var btnSon = [];
     // recup dde la balise audio
-        var player = document.getElementById('player');
-        var fileDir = "son/";
+    var player = document.getElementById('player');
+    var fileDir = "son/";
     // FIN
     // Gestion duu menu VAR
     var conteneurMenu = document.getElementById('conteneurMenu');
@@ -31,14 +31,11 @@ window.onload = function(){
                 //creation d'un node(balise html ou tag) "a" dans le DOM( document object mobile)
                 var btn = document.createElement('a');
 
-                //creation d'un node (balise html ou tag) "a" dans le DOM( document object mobile)
-                //var imgs = document.createElement('img');
-
                 // On va chercher la valeur de la clé image dans le json ressources
                 var imgSrc = 'img/' + ressources[i].img;
+
+                // Puis on attribut au background de l'élément courant, un background
                 li.style.background = "url(' " + imgSrc + " ')";
-                // Puis on attribut à la node un attribut source contenant l'adresse de l'image
-                //img.setAttribute('src', imgSrc);
 
                 //Stockage du 'a' dans le tableau
                 btnSon.push(btn);
@@ -46,29 +43,33 @@ window.onload = function(){
                 // inclusion du bouton dans le li
                 li.appendChild(btn);
 
-                // inclusion de l'image dans le li
-                //li.appendChild(img);
-
                 // application du "#" dans le parametre "href" du a(btn)
                 btn.href = "#";
 
                 // boucle permettant de rajouter autant de parametres "data-kekchose" qu'il y a de clef (la paire {clef:"valeur"}) dans l'objet a l'index 'i' du fichier ressources
                 for(var key in ressources[0]){
+
                     // test conditionnel pour ne pas mettre les valeurs de "son" et de titre des objets de ressources dans les parametres data du lien (btnson): si clef de l'objet est different de 'son' et (and) clef de l'objet est different de "titre" on rentre dans les accolades....
                     if(key !== 'son' && key !== 'titre'){
                         //... et on utilise dataset pour rajouter un "data-meme nom que clef dans le lien dont la valeur est égale à la valeur de la même clef dans l'objet ex:<A HREF="#" DATA-AUTEUR="Kaaris"> texte </a>
                         btn.dataset[key]=ressources[i][key];
                     }
+
                 }
-                    //ajout du text du lien correspondant à la clef "titre" des objets ressources
+
+                //ajout du text du lien correspondant à la clef "titre" des objets ressources
                 btn.textContent = ressources[i].titre;
-                    //ajout de l'ecouteur d'evenement de type 'click' au lien a (btn) permettant de lire un son
+
+                //ajout de l'ecouteur d'evenement de type 'click' au lien a (btn) permettant de lire un son
                 btn.addEventListener('click',function(event){
+
                     // bloquage du comportement par défaut du lien
                     event.preventDefault();
                     // lancement de la fonctionde lecture de son avec comme paramètre l'index de placement du bouton (this = celui-ci au moment ou il est clické) dans le tableau de stockage
-                    play(btnSon.indexOf(this))
+                    play(btnSon.indexOf(this));
+
                 });
+
                 //au final on place les li contenant les boutons dans la page
                 conteneurBtn.appendChild(li);
             };
@@ -162,6 +163,7 @@ window.onload = function(){
         };
         openCloseMenu(btnMenu)
     };
+    
     function resetFiltre(){
         for (var i = 0; i < btnSon.length;i++){
             btnSon[i].style.display = "block";
@@ -173,15 +175,7 @@ window.onload = function(){
         event.preventDefault();
         resetFiltre();
     });
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     function init(){
         createBtnSon();
         createRubriques();
