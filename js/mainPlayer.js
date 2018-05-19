@@ -20,40 +20,59 @@ window.onload = function(){
     
     //Fonction qui crée et met les boutons audios directement dans le conteneur en s'appyuyant sur le fichier source : tant qu'il y a des objets son dans le fichiers, un nombre équivalent de bouton seront crée par la boucle de la fonction
     // Gestion du player Function
-        function createBtnSon(){    
-            //boule sur le nombre d'objets du fichier ressources
+        function createBtnSon(){
+
+            //boucle sur le nombre d'objets du fichier ressources
             for (var i = 0;i< ressources.length; i++){
-            //création d'un node(balise html ou tag) 'li' dans le DOM
-            var li = document.createElement('LI');
-            //creation d'un node(balise html ou tag) "a" dans le DOM( document object mobile)
-            var btn = document.createElement('A');
-            //Stockage du 'a' dans le tableau
-            btnSon.push(btn);
-            // inclusion dans le li
-            li.appendChild(btn);
-            // application du "#" dans le parametre "href" du a(btn)
-            btn.href = "#";
-            // boucle permettant de rajouter autant de parametres "data-kekchose" qu'il y a de clef (la paire {clef:"valeur"}) dans l'objet a l'index 'i' du fichier ressources
-            for(var key in ressources[0]){
-                // test conditionnel pour ne pas mettre les valeurs de "son" et de titre des objets de ressources dans les parametres data du lien (btnson): si clef de l'objet est different de 'son' et (and) clef de l'objet est different de "titre" on rentre dans les accolades....
-                if(key !== 'son' && key !== 'titre'){
-                    //... et on utilise dataset pour rajouter un "data-meme nom que clef dans le lien dont la valeur est égale à la valeur de la même clef dans l'objet ex:<A HREF="#" DATA-AUTEUR="Kaaris"> texte </a>
-                    btn.dataset[key]=ressources[i][key];
+
+                //création d'un node(balise html ou tag) 'li' dans le DOM
+                var li = document.createElement('li');
+
+                //creation d'un node(balise html ou tag) "a" dans le DOM( document object mobile)
+                var btn = document.createElement('a');
+
+                //creation d'un node (balise html ou tag) "a" dans le DOM( document object mobile)
+                //var imgs = document.createElement('img');
+
+                // On va chercher la valeur de la clé image dans le json ressources
+                var imgSrc = 'img/' + ressources[i].img;
+                li.style.background = "url(' " + imgSrc + " ')";
+                // Puis on attribut à la node un attribut source contenant l'adresse de l'image
+                //img.setAttribute('src', imgSrc);
+
+                //Stockage du 'a' dans le tableau
+                btnSon.push(btn);
+
+                // inclusion du bouton dans le li
+                li.appendChild(btn);
+
+                // inclusion de l'image dans le li
+                //li.appendChild(img);
+
+                // application du "#" dans le parametre "href" du a(btn)
+                btn.href = "#";
+
+                // boucle permettant de rajouter autant de parametres "data-kekchose" qu'il y a de clef (la paire {clef:"valeur"}) dans l'objet a l'index 'i' du fichier ressources
+                for(var key in ressources[0]){
+                    // test conditionnel pour ne pas mettre les valeurs de "son" et de titre des objets de ressources dans les parametres data du lien (btnson): si clef de l'objet est different de 'son' et (and) clef de l'objet est different de "titre" on rentre dans les accolades....
+                    if(key !== 'son' && key !== 'titre'){
+                        //... et on utilise dataset pour rajouter un "data-meme nom que clef dans le lien dont la valeur est égale à la valeur de la même clef dans l'objet ex:<A HREF="#" DATA-AUTEUR="Kaaris"> texte </a>
+                        btn.dataset[key]=ressources[i][key];
+                    }
                 }
-            }
-                //ajout du text du lien correspondant à la clef "titre" des objets ressources
-            btn.textContent = ressources[i].titre;
-                //ajout de l'ecouteur d'evenement de type 'click' au lien a (btn) permettant de lire un son
-            btn.addEventListener('click',function(event){
-                // bloquage du comportement par défaut du lien
-                event.preventDefault();
-                // lancement de la fonctionde lecture de son avec comme paramètre l'index de placement du bouton (this = celui-ci au moment ou il est clické) dans le tableau de stockage
-                play(btnSon.indexOf(this))
-            });
+                    //ajout du text du lien correspondant à la clef "titre" des objets ressources
+                btn.textContent = ressources[i].titre;
+                    //ajout de l'ecouteur d'evenement de type 'click' au lien a (btn) permettant de lire un son
+                btn.addEventListener('click',function(event){
+                    // bloquage du comportement par défaut du lien
+                    event.preventDefault();
+                    // lancement de la fonctionde lecture de son avec comme paramètre l'index de placement du bouton (this = celui-ci au moment ou il est clické) dans le tableau de stockage
+                    play(btnSon.indexOf(this))
+                });
                 //au final on place les li contenant les boutons dans la page
-            conteneurBtn.appendChild(li);
-        };
-    }
+                conteneurBtn.appendChild(li);
+            };
+        }
     
 
     // fonction de lancement du son
