@@ -85,29 +85,42 @@ h1{
 }
 #conteneurBtnSon{
     width:100%;
-    padding-top:30px;
+    padding-top:40px;
 }
+
+#conteneurBtnSon li{
+    margin:4px;
+}
+
 #conteneurBtnSon a:link{
     font-size:1em;
     line-height:30px;
     padding:5px;
     color:#666;
     /*background-color:#eee;*/
-    border:#ddd solid 1px;
     width:320px;
     height:260px;
     display:block;
-    margin: 10px;
     font-weight:bold;
     color:#333;
-    box-shadow:0 0 5px rgba(0,0,0,0.8);
     border-radius: 2px;
     vertical-align: middle;
     line-height:250px;
+    opacity:0;
+    transition: 0.5s;
 }
 
 #conteneurBtnSon a:hover{
     color:darkgrey;
+    opacity:1;
+    transition:0.5s;
+}
+
+#conteneurBtnSon a:after{
+    background-color:#ffffff;
+    height:50%;
+    width:100%;
+
 }
 
 /*menu coulissant*/
