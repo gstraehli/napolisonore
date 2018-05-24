@@ -2,19 +2,27 @@
 // pour les objert json l'accès aux valeurs (ex:"insulte") se fait à l'aide de clef (ex: auteur ou son ou titre) ce qui donne pour un tableau : tableau[0] pour la première valeur et objet .auteur pour la première valeur du json
 
 var ressources = [
-    { auteur: "Lopez Gitan", type: "voix", son: 'gueule.mp3', titre: "Photo 1", img: "img1.jpg"},
-    { auteur: "kaaris", type: "voix", son: 'kaaris.mp3', titre: "Photo 2", img: "img2.jpg"},
-    { auteur: "Antoine Daniel", type: "voix", son: 'popopo.mp3', titre: "Photo 3", img: "img3.jpg"},
-    { auteur: "Antoine Daniel", type: "voix", son: 'eddy.mp3', titre: "Photo 4", img: "img4.jpg"},
-    { auteur: "Antoine Daniel", type: "voix", son: 'russie.mp3', titre: "Photo 5", img: "img5.jpg"},
-    { auteur: "Antoine Daniel", type: "voix", son: 'psycho.mp3', titre: "Photo 6", img: "img6.jpg"},
-    { auteur: "Antoine Daniel", type: "voix", son: 'salutAD.mp3', titre: "Photo 7", img: "img7.jpg"},
-    { auteur: "South Park", type: "animé", son: 'gogole.mp3', titre: "Photo 8", img: "img8.jpg"},
-    { auteur: "leeroy Jenkins", type: "jeux", son: 'leeroy.mp3', titre: "Photo 9", img: "img9.jpg"},
-    { auteur: "Wilhelm", type: "voix", son: 'Wilhelm.mp3', titre: "Photo 10", img: "img10.jpg"},
-    { auteur: "Naheulbeuk", type: "voix", son: 'nain.mp3', titre: "Photo 11", img: "img11.jpg"},
-    { auteur: "Game Of Thrones", type: "voix", son: 'hodor.mp3', titre: "Photo 12", img: "img12.jpg"},
-    { auteur: "Kaamlott", type: "voix", son: 'perceval.mp3', titre: "Photo 13", img: "img13.jpg"},
-    { auteur: "Kaamlott", type: "voix", son: 'gras.mp3', titre: "Photo 14", img: "img14.jpg"}
+    { auteur: "Amara", type: "voix", son: 'amara.mp3', titre: "Amara", img: "amara.jpg"},
+    { auteur: "Chloé", type: "voix", son: 'chloe-hercu.mp3', titre: "Chloé - Vue sur Herculanum", img: "chloe-hercu.jpg"},
+    { auteur: "Chloé", type: "voix", son: 'chloe-pano.mp3', titre: "Chloé - Panorama", img: "chloe-pano.jpg"},
+    { auteur: "Elena", type: "voix", son: 'elena-poseido.mp3', titre: "Elena - Fontaine de Poseidon", img: "elena.jpg"},
+    { auteur: "Elena", type: "voix", son: 'elena-corps.mp3', titre: "Elena - Corps pétrifiés", img: "elena-corps.jpg"},
+    { auteur: "Elena", type: "voix", son: 'elena-glace.mp3', titre: "Elena - Les glaces", img: "elena-glace.jpg"},
+    { auteur: "Elena", type: "voix", son: 'elena-reco.mp3', titre: "Elena - Recomposition", img: "elena-reco.jpg"},
+    { auteur: "Elena", type: "voix", son: 'elena-statue.mp3', titre: "Elena - Statues", img: "elena-statue.jpg"},
+    { auteur: "Elena", type: "voix", son: 'elena-serca.mp3', titre: "Elena - Hephaistos", img: "eva-serca.jpg"},
+    { auteur: "Ines", type: "voix", son: 'ines-chat.mp3', titre: "Ines - Bruno", img: "ines-chat.jpg"},
+    { auteur: "Lise", type: "voix", son: 'lise-santa.mp3', titre: "Lise - Santa", img: "lise-gradin.jpg"},
+    { auteur: "Melissa", type: "voix", son: 'melissa-palestre.mp3', titre: "Melissa - Palestre", img: "melissa-palestre.jpg"},
+    { auteur: "Melissa", type: "voix", son: 'melissa-soleil.mp3', titre: "Melissa - Coucher de soleil", img: "melissa-soleil.jpg"},
+    { auteur: "Rahil", type: "voix", son: 'rahil-atrium.mp3', titre: "Rahil - Atrium", img: "rahil-atrium.jpg"},
+    { auteur: "Rahil", type: "voix", son: 'rahil-vent.mp3', titre: "Rahil - Vent et pierres noires", img: "rahil-vent.jpg"},
+    { auteur: "Safia", type: "voix", son: 'sofia-fresques.mp3', titre: "Sofia - Fresques", img: "sofia-fresques.jpg"},
+    { auteur: "Souleymane", type: "voix", son: 'souleymane-restitua.mp3', titre: "Souleymane - Santa Restituta", img: "souleymane-restitua.jpg"},
+    { auteur: "Souleymane", type: "voix", son: 'souleymane-therme.mp3', titre: "Souleymane - Therme", img: "souleymane-therme.jpg"},
+    { auteur: "Yasmine", type: "voix", son: 'yasmine-dieux.mp3', titre: "Yasmine - ", img: "souleymane - Restitua.jpg"},
+    { auteur: "Yasmine", type: "voix", son: 'yasmine-neptune.mp3', titre: "Yasmine - Fresque de Neptune", img: "yasmine-neptune.jpg"},
+    { auteur: "Yasmine", type: "voix", son: 'yasmine-pots.mp3', titre: "Yasmine - Thermopodium", img: "yasmine-pots.jpg"},
+    { auteur: "Zineb", type: "voix", son: 'zineb-villas.mp3', titre: "Zineb - Villas", img: "zineb-villas.jpg"}
 ] 
 
