@@ -90,6 +90,8 @@ h1{
 
 #conteneurBtnSon li{
     margin:4px;
+    background-size: cover!important;
+    background-position: center!important;
 }
 
 #conteneurBtnSon a:link{
@@ -111,9 +113,11 @@ h1{
 }
 
 #conteneurBtnSon a:hover{
-    color:darkgrey;
+    color:#000000;
     opacity:1;
     transition:0.5s;
+    background-color:rgba(255, 255, 255, 0.5);
+
 }
 
 #conteneurBtnSon a:after{
