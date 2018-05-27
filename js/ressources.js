@@ -10,9 +10,13 @@ var ressources = [
     { auteur: "Elena", type: "voix", son: 'elena-glace.mp3', titre: "Elena - Les glaces", img: "elena-glace.jpg"},
     { auteur: "Elena", type: "voix", son: 'elena-reco.mp3', titre: "Elena - Recomposition", img: "elena-reco.jpg"},
     { auteur: "Elena", type: "voix", son: 'elena-statue.mp3', titre: "Elena - Statues", img: "elena-statue.jpg"},
-    { auteur: "Elena", type: "voix", son: 'elena-serca.mp3', titre: "Elena - Hephaistos", img: "eva-serca.jpg"},
+    { auteur: "Eva", type: "voix", son: 'eva-serca.mp3', titre: "Eva - Hephaistos", img: "eva-serca.jpg"},
     { auteur: "Ines", type: "voix", son: 'ines-chat.mp3', titre: "Ines - Bruno", img: "ines-chat.jpg"},
-    { auteur: "Lucie", type: "voix", son: 'lise-santa.mp3', titre: "Lucie - Gradin", img: "lucie-gradin.jpg"},
+    { auteur: "Lise", type: "voix", son: 'lise-fresque.mp3', titre: "Lise - Fresque", img: "lise-fresque.jpg"},
+    { auteur: "Lucie", type: "voix", son: 'lucie-santa.mp3', titre: "Lucie - Basilique", img: "lucie-santa.jpg"},
+    { auteur: "Lucie", type: "voix", son: 'lucie-decollage.mp3', titre: "Lucie - Avion", img: "lucie-avion.jpg"},
+    { auteur: "Lucie", type: "voix", son: 'lucie-alex.mp3', titre: "Lucie - Mosaïque", img: "lucie-alex.jpg"},
+    { auteur: "Lucie", type: "voix", son: 'lucie-naples.mp3', titre: "Lucie - Gradin", img: "lucie-gradin.jpg"},
     { auteur: "Melissa", type: "voix", son: 'melissa-palestre.mp3', titre: "Melissa - Palestre", img: "melissa-palestre.jpg"},
     { auteur: "Melissa", type: "voix", son: 'melissa-soleil.mp3', titre: "Melissa - Soleil", img: "melissa-soleil.jpg"},
     { auteur: "Rahil", type: "voix", son: 'rahil-atrium.mp3', titre: "Rahil - Atrium", img: "rahil-atrium.jpg"},
@@ -23,6 +27,6 @@ var ressources = [
     { auteur: "Yasmine", type: "voix", son: 'yasmine-dieux.mp3', titre: "Yasmine - Fresque dieux ", img: "yasmine-4dieux.jpg"},
     { auteur: "Yasmine", type: "voix", son: 'yasmine-neptune.mp3', titre: "Yasmine - Neptune", img: "yasmine-neptune.jpg"},
     { auteur: "Yasmine", type: "voix", son: 'yasmine-pots.mp3', titre: "Yasmine - Thermopodium", img: "yasmine-pots.jpg"},
-    { auteur: "Zineb", type: "voix", son: 'zineb-villas.mp3', titre: "Zineb - Villas", img: "zineb-villas.jpg"}
+    { auteur: "Zineb", type: "voix", son: 'zineb-villas.mp3', titre: "Zineb - Villas", img: "zineb-villas.png"}
 ] 
 
