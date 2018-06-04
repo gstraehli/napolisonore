@@ -1,39 +1,38 @@
-S<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
     <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <title>Boite à son Latiniste</title>
         <link href="css/www.css" rel="stylesheet" type="text/css" />
-<!--        <link href="css/animate.css" rel="stylesheet" type="text/css" />-->
+        <link href="css/basicLightbox.min.css" rel="stylesheet" type="text/css" />
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <script type="text/javascript" src="js/basicLightbox/basicLightbox.min.js"></script>
         <script type="text/javascript" src="js/ressources.js"></script>
         <script type="text/javascript" src="js/mainPlayer.js"></script>
     </head>
-<body>
-    <header>
-        <div class="logo">
+    <body>
+        <header>
+            <div class="logo"></div>
+            <div class="slogan">
+                <span class="vert">Regardez</span> • 
+                <span class="blanc">Cliquez</span> • 
+                <span class="rouge">Écoutez</span>
+            </div>
+        </header>
+        <div id="conteneurMenu">
+            <a href="#" class="openFiltre"></a>
+            <a href="#" class="tout">Tout</a>
+            <nav id="menu"></nav>
         </div>
-        <div class="slogan">
-            <span class="vert">Regardez</span> • 
-            <span class="blanc">Cliquez</span> • 
-            <span class="rouge">Écoutez</span>
+        <div id="global">
+            <audio id="player" autoplay>
+                <source src="#" type="audio/mpeg">
+            </audio>
+            <ul id="conteneurBtnSon"></ul>
         </div>
-    </header>$
-    <div id="conteneurMenu">
-        <a href="#" class="openFiltre"></a>
-        <a href="#" class="tout">Tout</a>
-        <nav id="menu">
-        </nav>
-    !</div>
-   <div id="global">
-        
-        <audio id="player" autoplay>
-            <source src="#" type="audio/mpeg">
-        </audio>
-        <ul id="conteneurBtnSon">
-        </ul>
-    </div>
-</body>
+    </body>
 </html>
 <!-- Coucou, voici un commentaire -->
