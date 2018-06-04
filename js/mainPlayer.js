@@ -24,15 +24,24 @@ window.onload = function(){
 
             //boucle sur le nombre d'objets du fichier ressources
             for (var i = 0;i< ressources.length; i++){
+                var dataId = [i];
 
                 //création d'un node(balise html ou tag) 'li' dans le DOM
                 var li = document.createElement('li');
+                li.dataset.showId = ++dataId;
 
                 //creation d'un node(balise html ou tag) "a" dans le DOM( document object mobile)
                 var btn = document.createElement('a');
 
                 // On va chercher la valeur de la clé image dans le json ressources
                 var imgSrc = 'img/' + ressources[i].img;
+
+                var image = document.createElement('img');
+                image.dataset.id = dataId;
+                image.dataset.basicLightbox = '';
+                image.width = 700;
+                image.height = 400;
+                image.src = imgSrc;
 
                 // Puis on attribut au background de l'élément courant, un background
                 li.style.background = "url(' " + imgSrc + " ')";
@@ -42,15 +51,16 @@ window.onload = function(){
 
                 // inclusion du bouton dans le li
                 li.appendChild(btn);
+                li.appendChild(image);
 
                 // application du "#" dans le parametre "href" du a(btn)
                 btn.href = "#";
 
                 // boucle permettant de rajouter autant de parametres "data-kekchose" qu'il y a de clef (la paire {clef:"valeur"}) dans l'objet a l'index 'i' du fichier ressources
                 for(var key in ressources[0]){
-
                     // test conditionnel pour ne pas mettre les valeurs de "son" et de titre des objets de ressources dans les parametres data du lien (btnson): si clef de l'objet est different de 'son' et (and) clef de l'objet est different de "titre" on rentre dans les accolades....
-                    if(key !== 'son' && key !== 'titre'){
+                    if(key !== 'son' && key !== 'titre' && key != 'showId'){
+                        console.log(key);
                         //... et on utilise dataset pour rajouter un "data-meme nom que clef dans le lien dont la valeur est égale à la valeur de la même clef dans l'objet ex:<A HREF="#" DATA-AUTEUR="Kaaris"> texte </a>
                         btn.dataset[key]=ressources[i][key];
                     }
@@ -181,4 +191,16 @@ window.onload = function(){
         createRubriques();
     }
     init();
+
+   const getTargetHTML = function (elem) {
+        const id = elem.getAttribute('data-show-id');
+        const target = document.querySelector(`[data-id="${id}"]`);
+        return target.outerHTML;
+    };
+
+    document.querySelectorAll('[data-show-id]').forEach(function (elem) {
+        console.log(elem);
+        const html = getTargetHTML(elem);
+        elem.onclick = basicLightbox.create(html).show;
+    });
 }
