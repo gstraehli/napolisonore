@@ -84,6 +84,19 @@ h1{
     line-height:100px;
     font-family: 'Open Sans' sans-serif;
 }
+
+.prez{
+    padding:50px 250px 30px 250px;
+}
+.prez-high{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.prez p{
+    font-size:18px;
+    text-align:center;
+}
 #conteneurBtnSon{
     width:100%;
     padding-top:40px;
@@ -200,10 +213,13 @@ h1{
 #conteneurMenu a:hover.tout{
     color:darkgray;
 }
+nav#menu:first-child{
+    display:none;
+}
+
 @media only screen and (max-width:500px){
     #global{
         width:100%;
-        background-color:#f00;
         
     }
 }
